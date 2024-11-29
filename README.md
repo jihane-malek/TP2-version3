@@ -9,14 +9,17 @@ entities :
 Contient les classes qui représentent les entités de l'application.
 Exemple : Product représente un produit avec ses attributs (id, nom, prix, etc.).
 Ces classes sont mappées à des tables dans la base de données grâce aux annotations JPA (@Entity).
+
 repository :
 
 Contient les interfaces pour interagir avec la base de données.
 Exemple : ProductRepository utilise Spring Data JPA pour fournir des méthodes prêtes à l’emploi (comme findAll(), findById(), etc.), réduisant le code nécessaire pour les opérations CRUD.
+
 web :
 
 Contient les contrôleurs REST qui gèrent les requêtes HTTP et fournissent les endpoints pour interagir avec l'application.
 Exemple : ProductRestService expose des endpoints comme /products (pour récupérer tous les produits) et /products/{id} (pour récupérer un produit spécifique).
+
 2. src/main/resources
 Ce répertoire contient les ressources nécessaires au bon fonctionnement de l'application.
 
@@ -30,7 +33,9 @@ application.properties :
 
 Fichier de configuration de l'application.
 Contient des propriétés comme les informations de connexion à la base de données, le port du serveur, ou d'autres paramètres spécifiques à Spring.
+
 3. src/test/java/com.example.tp2version3
+   
 Ce dossier contient les tests unitaires et d'intégration pour vérifier le bon fonctionnement des différentes parties de l'application.
 
 Exemple : Tp2Version3ApplicationTests teste le démarrage de l'application et d'autres comportements critiques.
@@ -44,10 +49,15 @@ L'utilité de Spring Boot dans ce projet
 Spring Boot est un framework basé sur Spring qui simplifie le développement des applications Java en fournissant :
 
 Configuration automatique : Pas besoin de configurer manuellement des fichiers XML complexes.
+
 Gestion des dépendances : Grâce à Maven, Spring Boot gère toutes les bibliothèques nécessaires.
+
 Création d'API REST rapide :
+
 Annotations comme @RestController et @GetMapping simplifient l'exposition des endpoints.
 Exemple : @GetMapping("/products") permet de définir facilement un endpoint pour récupérer tous les produits.
+
 Gestion de la base de données :
+
 Spring Data JPA offre une intégration facile avec les bases de données relationnelles.
 Exemple : Méthodes prêtes à l’emploi comme findAll() pour obtenir tous les enregistrements.
